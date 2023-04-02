@@ -1,12 +1,16 @@
 import styled from "styled-components";
-import Gokuljs from "./assets/images/gokuljs.jpg";
+import ProfileNoBg from "./assets/images/profileNoBg.png";
+
 const Main = styled.div`
   width: 100vw;
   height: 100vh;
-  background: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
+
+  background-size: contain;
+  background-repeat: no-repeat;
   .portfolioHeader {
     width: 90%;
     height: 90%;
@@ -14,7 +18,6 @@ const Main = styled.div`
     flex-basis: 1;
     .details {
       width: 50%;
-      color: white;
       display: flex;
       padding: 2rem;
       align-items: center;
@@ -32,6 +35,7 @@ const Main = styled.div`
           font-size: 2.5rem;
           margin-bottom: 0.625rem;
           font-family: "Kalam", cursive;
+          color: black;
         }
       }
     }
@@ -40,6 +44,7 @@ const Main = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
+      background: transparent;
       .profile {
         width: 25rem;
         height: 25em;
@@ -62,7 +67,7 @@ function App() {
           </div>
         </div>
         <div className="image">
-          <img src={Gokuljs} className="profile" alt="Gokul JS" />
+          <img src={ProfileNoBg} className="profile" alt="Gokul JS" />
         </div>
       </div>
     </Main>
