@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Gokuljs from "./assets/images/gokuljs.jpg";
 const Main = styled.div`
   width: 100vw;
   height: 100vh;
@@ -15,20 +16,36 @@ const Main = styled.div`
       width: 50%;
       color: white;
       display: flex;
-      padding: 2rem 4rem;
+      padding: 2rem;
       align-items: center;
       .info {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        gap: 12px;
         font-size: 2rem;
         text-transform: uppercase;
-        font-family: "Varela", sans-serif;
+        h3,
+        h2,
+        h1 {
+          margin: 0;
+          padding: 0;
+          font-size: 2.5rem;
+          margin-bottom: 0.625rem;
+          font-family: "Kalam", cursive;
+        }
       }
     }
     .image {
       width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .profile {
+        width: 25rem;
+        height: 25em;
+        object-fit: cover;
+        border-radius: 50%;
+      }
     }
   }
 `;
@@ -39,12 +56,14 @@ function App() {
       <div className="portfolioHeader">
         <div className="details">
           <div className="info">
-            <div>Hi</div>
-            <div>I'm Gokul JS</div>
-            <div>Founding Engineer At Aerotime</div>
+            <h3>Hi</h3>
+            <h2>I'm Gokul JS</h2>
+            <h1>Founding Engineer At Aerotime</h1>
           </div>
         </div>
-        <div className="image"></div>
+        <div className="image">
+          <img src={Gokuljs} className="profile" alt="Gokul JS" />
+        </div>
       </div>
     </Main>
   );
